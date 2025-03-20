@@ -1,7 +1,7 @@
 {
   "name": "PENG LOGISTICS",
   "short_name": "Peng Logistics",
-  "start_url": "/p/pwa-home.html",
+  "start_url": "https://www.penglogistics.com/p/instant-door-to-door-deliveries.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0f9d58",
