@@ -1,82 +1,51 @@
-/* PWA Top Bar */
-.app-top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #0f9d58;
-  padding: 10px;
-  color: white;
+/* Example media query for devices with max-width 600px */
+@media (max-width: 600px) {
+  .pwa-home-container {
+    padding: 10px;
+  }
+  .slide-button, .back-button {
+    width: 90%;
+    font-size: 1em;
+  }
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@-webkit-keyframes slideIn {
+  from { -webkit-transform: translateX(100%); opacity: 0; }
+  to { -webkit-transform: translateX(0); opacity: 1; }
 }
 
-/* Menu Button */
-.app-menu-button {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+@keyframes slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+@-webkit-keyframes slideOut {
+  from { -webkit-transform: translateX(0); opacity: 1; }
+  to { -webkit-transform: translateX(100%); opacity: 0; }
 }
 
-/* Display Logo */
-.app-display-logo {
-  height: 40px;
-  margin: 0 auto;
+.slide-in {
+  animation: slideIn 0.5s forwards;
+  -webkit-animation: slideIn 0.5s forwards;
+}
+.slide-out {
+  animation: slideOut 0.5s forwards;
+  -webkit-animation: slideOut 0.5s forwards;
+}
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #6c757d;
+  --font-family: 'Arial', sans-serif;
 }
 
-/* Google User Icon */
-.app-user-icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.slide-button {
+  background-color: var(--primary-color);
+  font-family: var(--font-family);
 }
 
-/* Side Menu */
-.appside-menu {
-  position: fixed;
-  left: -250px;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  background: #333;
-  color: white;
-  padding: 20px;
-  transition: left 0.3s ease;
-  z-index: 1000;
-}
-.appside-menu.open {
-  left: 0;
-}
-.appside-menu ul {
-  list-style: none;
-  padding: 0;
-}
-.appside-menu li {
-  margin-bottom: 15px;
-}
-.appside-menu a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Slider Container */
-.app-slider {
-  display: flex;
-  overflow: hidden;
-  margin: 20px;
-  height: 200px;
-  position: relative;
-}
-.app-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  background: #f4f4f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.app-slide a {
-  text-decoration: none;
-  color: #333;
-  font-size: 24px;
+.back-button {
+  background-color: var(--secondary-color);
+  font-family: var(--font-family);
 }
