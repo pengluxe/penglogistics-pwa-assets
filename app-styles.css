@@ -1,0 +1,82 @@
+/* PWA Top Bar */
+.app-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0f9d58;
+  padding: 10px;
+  color: white;
+}
+
+/* Menu Button */
+.app-menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Display Logo */
+.app-display-logo {
+  height: 40px;
+  margin: 0 auto;
+}
+
+/* Google User Icon */
+.app-user-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Side Menu */
+.appside-menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+.appside-menu.open {
+  left: 0;
+}
+.appside-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.appside-menu li {
+  margin-bottom: 15px;
+}
+.appside-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Slider Container */
+.app-slider {
+  display: flex;
+  overflow: hidden;
+  margin: 20px;
+  height: 200px;
+  position: relative;
+}
+.app-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-slide a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
