@@ -1,39 +1,18 @@
-// Register Service Worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
-    .then(() => console.log('Service Worker Registered'))
-    .catch(err => console.error('Service Worker registration failed:', err));
-}
-
-// Google Sign-In Callback
-function onSignIn(googleUser) {
-  const profile = googleUser.getBasicProfile();
-  document.getElementById('appGoogleSignIn').innerHTML =
-    '<img src="' + profile.getImageUrl() + '" alt="User Icon" class="app-user-icon">';
-}
-
-// Toggle the Side Menu
-document.getElementById('appMenuButton').addEventListener('click', function() {
-  const appSideMenu = document.getElementById('appSideMenu');
-  appSideMenu.classList.toggle('open');
-});
-
-// Slider Functionality
-let currentIndex = 0;
-const slides = document.querySelectorAll('.app-slide');
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${100 * (i - index)}%)`;
-    slide.style.transition = 'transform 0.5s ease-in-out';
+function slideOut(e) {
+  e.preventDefault(); // Prevent immediate navigation
+  var url = e.currentTarget.getAttribute('href');
+  var container = document.getElementById('pwa-container');
+  container.classList.remove('slide-in');
+  container.classList.add('slide-out');
+  
+  // Disable all buttons during the animation
+  var buttons = document.querySelectorAll('.slide-button, .back-button');
+  buttons.forEach(function(btn) {
+    btn.style.pointerEvents = 'none';
   });
+  
+  // Delay navigation until the animation finishes (500ms)
+  setTimeout(function() {
+    window.location.href = url;
+  }, 500);
 }
-
-// Auto-slide (optional)
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-}, 5000);
-
-// Initialize Slider
-showSlide(currentIndex);
