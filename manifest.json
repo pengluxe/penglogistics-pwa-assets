@@ -1,7 +1,7 @@
 {
   "name": "PENG LOGISTICS",
   "short_name": "Peng Logistics",
-  "start_url": "/",
+  "start_url": "/p/pwa-home.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0f9d58",
