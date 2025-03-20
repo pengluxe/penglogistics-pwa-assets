@@ -1,14 +1,14 @@
 {
   "name": "PENG LOGISTICS",
-  "short_name": "PENG",
+  "short_name": "Peng Logistics",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0f9d58",
   "icons": [
     {
-      "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiFmyqhyDpeRBL0WoyhMU_YtMt7X0QZidL7Z2rT5YRSxAdQdAdpIWV2jPYobYfWrj13ex1R5Qum-wZdgyXtxdYe_yKkCL1gTBQpnZaOlhlluwFcR5icvf8zP_4YpsfmISNuE_7OEY_AMMNM61AHe6U2INVUtmTKiNcaXUWBhshre5FS5JY6z1IQ5K4COAc=s720",
-      "sizes": "720x720",
+      "src": "https://i.ibb.co/3Dkq6rT/744c9452-bde1-481c-b772-f0be63bc805e-pblu-modified.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
