@@ -1,7 +1,7 @@
 {
   "name": "PENG LOGISTICS",
   "short_name": "Peng Logistics",
-  "start_url": "/p/make-bookings.html",
+  "start_url": "https://www.penglogistics.com/p/make-bookings.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0f9d58",
